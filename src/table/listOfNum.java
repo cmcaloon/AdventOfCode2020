@@ -1,7 +1,7 @@
-import java.util.Arrays;
+package table;
 
-public class App {
-    static int[] taxList = {
+public class listOfNum {
+    public static int[] taxList = {
         1801,
         1324,
         1924,
@@ -202,75 +202,4 @@ public class App {
         1921,
         1965,
         1662};  
-
-        static void find2020() {
-            Arrays.sort(taxList);
-            int start = 0;
-            int last = taxList.length - 1;
-            int total = 0;
-            int sum;
-    
-            for (int x = 0; total != 2020; x++){
-                for (int y = 1; y <= last; y++){
-                    total = taxList[x] + taxList[y];
-                    if (total == 2020) {
-                        start = x;
-                        last = y;
-                        break;
-                    }
-                    else if (total > 2020)
-                        y = last;
-                }
-                System.out.println("Loop " + x);
-            }
-    
-            sum = taxList[start] * taxList[last];
-            System.out.println("Final answer is " + sum);
-        }
-
-        static void find2020Trio() {
-            Arrays.sort(taxList);
-            int first = 0;
-            int second = 50;
-            int last = taxList.length - 1;
-            int total = 0;
-            int sum;
-    
-            for (int x = 0; total != 2020; x++){
-                for (int y = 1; y <= last; y++){
-                    for (int z = 2; z <= last; z++){
-                        total = taxList[x] + taxList[y] + taxList[z];
-                        if (total == 2020) {
-                            first = x;
-                            second = y;
-                            last = z;
-                            break;
-                        }
-                        else if (total > 2020)
-                            z = last;
-                    }
-                       
-                }
-            }
-    
-            sum = taxList[first] * taxList[last] * taxList[second];
-            System.out.println("Final answer is " + sum);
-        }
-    
-    public static void main(String[] args) throws Exception {
-        
-        System.out.println("Hello, World! " + taxList[1]);
-        long startTime = System.nanoTime(); 
-        find2020();
-        long endTime   = System.nanoTime();
-        long totalTime = endTime - startTime;
-        totalTime = totalTime / 1000;
-        System.out.println("First Time = " +totalTime);
-        startTime = System.nanoTime(); 
-        find2020Trio();
-        endTime = System.nanoTime();
-        totalTime = endTime - startTime;
-        totalTime = totalTime / 1000;
-        System.out.println("Second Time = " +totalTime);
-    }
 }
