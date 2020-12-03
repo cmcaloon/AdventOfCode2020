@@ -57,8 +57,6 @@ public class Day1 {
         }
     
     public static void main(String[] args) throws Exception {
-        
-        System.out.println("Hello, World! " + listOfNum.taxList[1]);
         long startTime = System.nanoTime(); 
         find2020();
         long endTime   = System.nanoTime();
