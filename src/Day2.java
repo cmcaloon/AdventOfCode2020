@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import fuctions.ReadFileLines;
+import functions.ReadFileLines;
 
 public class Day2 {
     public static void main(String[] args) throws Exception {
