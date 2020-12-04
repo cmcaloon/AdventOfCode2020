@@ -25,6 +25,7 @@ public class Day3 {
         System.out.println("Route E is "+routeE);
 
         System.out.println("All Results Multiplied is "+multi);
+        findLeastTrees(tobPath);
     }
 
    private static int tobogganPaths(ArrayList<String> tobPath, int down, int right){
@@ -46,6 +47,22 @@ public class Day3 {
             
         }
         return count;  
+    }
+
+    private static void findLeastTrees(ArrayList<String> tobPath){
+        int lowest = 322;
+        int current = 0;
+        for (int x = 1; x < 20; x++){
+            for (int y = 1; y < 5; y++){
+                current = tobogganPaths(tobPath, y, x);
+                if (current < lowest){
+                    lowest = current;
+                    System.out.println("the current lowest x and Y are "+x+ " " +y+ " At the tree value of " +lowest);
+                }
+
+            }
+        }
+
     }
 
     private static String expandPath(String string){
