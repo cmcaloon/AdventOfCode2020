@@ -4,10 +4,11 @@ import functions.ReadFileLines;
 public class Day3 {
 
     public static void main(String[] args) throws Exception {
+        
         String filePath = "src/table/treeMap.txt";
         ArrayList<String> tobPath = new ArrayList<String>();
-        
         tobPath = ReadFileLines.readLines(filePath);
+        long startTime = System.nanoTime();
         int routeA = tobogganPaths(tobPath, 1, 1);
         int routeB = tobogganPaths(tobPath, 1, 3);
         int routeC = tobogganPaths(tobPath, 1, 5);
@@ -25,7 +26,12 @@ public class Day3 {
         System.out.println("Route E is "+routeE);
 
         System.out.println("All Results Multiplied is "+multi);
+        long endTime   = System.nanoTime();
+        ReadFileLines.findTime(startTime, endTime);
+        startTime = System.nanoTime();
         findLeastTrees(tobPath);
+        endTime   = System.nanoTime();
+        ReadFileLines.findTime(startTime, endTime);
     }
 
    private static int tobogganPaths(ArrayList<String> tobPath, int down, int right){

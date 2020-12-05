@@ -6,11 +6,15 @@ import functions.ReadFileLines;
 public class Day5 {
 
     public static void main(String[] args) throws Exception {
+        
         String filePath = "src/table/boardingManifest.txt";
         ArrayList<String> boardingList = new ArrayList<String>();
         
         boardingList = ReadFileLines.readLines(filePath);
+        long startTime = System.nanoTime();
         processBoarding(boardingList);
+        long endTime   = System.nanoTime();
+        ReadFileLines.findTime(startTime, endTime);
     }
 
     private static void processBoarding(ArrayList<String> boardingList) {

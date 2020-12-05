@@ -3,12 +3,20 @@ import functions.ReadFileLines;
 
 public class Day2 {
     public static void main(String[] args) throws Exception {
+        
+        
         String filePath = "src/table/passwordFile.txt";
         ArrayList<String> passwords = new ArrayList<String>();
 
         passwords = ReadFileLines.readLines(filePath);
+        long startTime = System.nanoTime();
         sledPasswordVerification(passwords);
+        long endTime   = System.nanoTime();
+        ReadFileLines.findTime(startTime, endTime);
+        startTime = System.nanoTime();
         tobogganPasswordVerification(passwords);
+        endTime   = System.nanoTime();
+        ReadFileLines.findTime(startTime, endTime);
 
     }
 
@@ -73,6 +81,4 @@ public class Day2 {
         }
         System.out.println("The number of valid Toboggan passwords are "+validPasswords);
     }
-
-    // TBD - Split string by : character
 }

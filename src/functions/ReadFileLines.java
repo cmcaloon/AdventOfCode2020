@@ -22,4 +22,11 @@ public class ReadFileLines {
         
         return readLines;
     }
+
+    public static void findTime(long startTime, long endTime){
+        long totalTime = 0;
+        totalTime = endTime - startTime;
+        totalTime = totalTime / 1000;
+        System.out.println("Run time is " +totalTime+ " microseconds");
+    }
 }

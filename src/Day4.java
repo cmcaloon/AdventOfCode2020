@@ -7,7 +7,10 @@ public class Day4 {
         ArrayList<String> passportList = new ArrayList<String>();
         
         passportList = ReadFileLines.readLines(filePath);
+        long startTime = System.nanoTime();
         parsePassport(passportList);
+        long endTime   = System.nanoTime();
+        ReadFileLines.findTime(startTime, endTime);
     }
 
     private static void parsePassport(ArrayList<String> passportList){

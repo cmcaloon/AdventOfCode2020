@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import table.listOfNum;
+import functions.ReadFileLines;
 
 public class Day1 {
         static void find2020() {
@@ -60,14 +61,10 @@ public class Day1 {
         long startTime = System.nanoTime(); 
         find2020();
         long endTime   = System.nanoTime();
-        long totalTime = endTime - startTime;
-        totalTime = totalTime / 1000;
-        System.out.println("First Time = " +totalTime);
+        ReadFileLines.findTime(startTime,endTime);
         startTime = System.nanoTime(); 
         find2020Trio();
         endTime = System.nanoTime();
-        totalTime = endTime - startTime;
-        totalTime = totalTime / 1000;
-        System.out.println("Second Time = " +totalTime);
+        ReadFileLines.findTime(startTime,endTime);
     }
 }
