@@ -42,7 +42,8 @@ public class Day6 {
         System.out.println("Final count is " +total);
     }
 
-    private static int checkGroupForm(ArrayList<String> groupForms) {
+/*    private static int checkGroupForm(ArrayList<String> groupForms) {
+        //Day 6 part 1
         ArrayList<Character> yesAnswers = new ArrayList<Character>();
         for (int x = 0; x < groupForms.size(); x++){
             for (int y = 0; y < groupForms.get(x).length(); y++){
@@ -55,7 +56,7 @@ public class Day6 {
         int totalCount = yesAnswers.size();
         return totalCount;
     }
-
+*/
     private static int checkGroupForm2(ArrayList<String> groupForms) {
         //messy messy...
         ArrayList<Character> yesAnswers = new ArrayList<Character>();

@@ -33,6 +33,7 @@ public class Day5 {
             {
                 int missingNum = allSeats.get(y)-1;
                 System.out.println("Missing Seat Id " +missingNum);
+                break;
             }
             //System.out.println("Seat Id " +allSeats.get(y));
         }
