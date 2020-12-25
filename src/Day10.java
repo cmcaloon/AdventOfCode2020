@@ -49,9 +49,9 @@ public class Day10 {
         ArrayList<Integer> mixedCount = new ArrayList<>();
         long total = 1;
         for (int i = 0; i < adapters.size(); i++){
-            long options = 0;
             mixedCount.add(adapters.get(i)); 
             if (i + 1 < adapters.size()){  
+                //Find substrings between manditory jumps and multiplies it by the length of the string
                 if (adapters.get(i) + 3 == adapters.get(i+1)){
                     System.out.println("No more options here");
                     System.out.println(mixedCount);
