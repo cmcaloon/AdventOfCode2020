@@ -33,7 +33,7 @@ public class Day9 {
     private static Boolean isValid(Long curNum, ArrayList<String> xmasCode, int i) {
         ArrayList<Long> xmasInt = new ArrayList<Long>();
         for (int x = 0; x <= 25; x++){
-            int test = i-x;
+            //int test = i-x;
             //System.out.println("i - x is " +test+ " which is at " +xmasCode.get(i-x));
             xmasInt.add(Long.parseLong(xmasCode.get(i-x)));
         }

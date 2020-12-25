@@ -95,7 +95,7 @@ private static int findBagIndex(ArrayList<String> parentBags, String bagName) {
     //System.out.println("Index in " +bagIndex);
     return bagIndex;
 }
-
+/*
 private static void removeDups(ArrayList<Integer> totalBagCount){
     ArrayList<Integer> test = new ArrayList<Integer>();
         test.add(totalBagCount.get(0));
@@ -108,4 +108,5 @@ private static void removeDups(ArrayList<Integer> totalBagCount){
         }
         System.out.println("Shiney Gold bag count = " +test.size());
 }
+*/
 }
